@@ -42,6 +42,21 @@ function startQuiz() {
     timer = setInterval(timeKeeper, 1000);
 }
 
+function endQuiz() {
+    clearInterval(timer);
+
+    headerText.textContent = "All done!"
+
+    inCorrect.textContent = "";
+    for(var i = 0; i < ansBtns.length; i++){
+        ansBtns[i].setAttribute('style', 'display:none');
+    }
+
+    highScoreInput.setAttribute('style', 'display: shown');
+    headerInfo.setAttribute('style', 'display: shown');
+    headerInfo.textContent = "Your final score is " + currentTime + ".";
+}
+
 function answerQuestion(answerPressed) {
     if(answerPressed.textContent === quiz[currentQuestion][5]){
         inCorrect.setAttribute('style', 'display: shown')
@@ -58,6 +73,8 @@ function answerQuestion(answerPressed) {
 
     if(currentQuestion < quiz.length)
         setQuestion();
+    else
+        endQuiz();
 }
 
 function handleButtonPress(event){
