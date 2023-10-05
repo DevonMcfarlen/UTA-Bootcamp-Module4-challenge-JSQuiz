@@ -85,15 +85,13 @@ function handleButtonPress(event){
         answerQuestion(event.target);
 }
 
-function submitHighscore(event) {
-    console.log(highScoreInput[0].value);
-
+function submitHighscore() {
     var userObject = {
         initials: highScoreInput[0].value,
         bestTime: currentTime
     };
 
-    localStorage.setItem("userObject", userObject);
+    localStorage.setItem("userHighscore", JSON.stringify(userObject));
 }
 
 btnGroup.addEventListener("click", handleButtonPress);
