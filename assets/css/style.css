@@ -4,6 +4,36 @@
     font-size: 24px;
 }
 
-.navbar span {
+#timer {
     font-size: 24px;
+}
+
+#startBtn {
+    border-radius: 1px;
+    border-radius: 10px;
+    background-color: rgb(187, 69, 187);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 18px;
+    color: white;
+}
+
+#answerBtn {
+    border-radius: 1px;
+    border-radius: 10px;
+    background-color: rgb(187, 69, 187);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 5px;
+    font-size: 18px;
+    color: white;
+}
+
+#in-correct {
+    color: gray;
+    font-size: 18;
 }
