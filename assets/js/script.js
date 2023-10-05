@@ -4,6 +4,7 @@ var headerText = document.querySelector('h1');
 var headerInfo = document.querySelector('.lead');
 var timeTracker = document.querySelector('#timer');
 var highScoreInput = document.querySelector('form');
+var highScoreSubmit = document.querySelector('#submitBtn');
 
 var ansBtns = btnGroup.querySelectorAll('#answerBtn');
 var currentQuestion = 0;
@@ -84,4 +85,16 @@ function handleButtonPress(event){
         answerQuestion(event.target);
 }
 
+function submitHighscore(event) {
+    console.log(highScoreInput[0].value);
+
+    var userObject = {
+        initials: highScoreInput[0].value,
+        bestTime: currentTime
+    };
+
+    localStorage.setItem("userObject", userObject);
+}
+
 btnGroup.addEventListener("click", handleButtonPress);
+highScoreSubmit.addEventListener("click", submitHighscore);
