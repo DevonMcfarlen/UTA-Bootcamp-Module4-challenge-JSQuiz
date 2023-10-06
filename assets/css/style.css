@@ -1,15 +1,8 @@
-
-.navbar a {
-    color: rgb(233, 83, 233);
-    font-size: 24px;
-}
-
 #timer {
     font-size: 24px;
 }
 
 #startBtn {
-    border-radius: 1px;
     border-radius: 10px;
     background-color: rgb(187, 69, 187);
     padding-top: 5px;
@@ -21,7 +14,6 @@
 }
 
 #answerBtn {
-    border-radius: 1px;
     border-radius: 10px;
     background-color: rgb(187, 69, 187);
     padding-top: 5px;
@@ -35,7 +27,31 @@
 
 #submitBtn {
     align-self: center;
-    border-radius: 1px;
+    border-radius: 10px;
+    background-color: rgb(187, 69, 187);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 18px;
+    color: white;
+}
+
+#goBackBtn {
+    align-self: center;
+    border-radius: 10px;
+    background-color: rgb(187, 69, 187);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 5px;
+    font-size: 18px;
+    color: white;
+}
+
+#clearBtn {
+    align-self: center;
     border-radius: 10px;
     background-color: rgb(187, 69, 187);
     padding-top: 5px;
@@ -50,4 +66,14 @@
 #in-correct {
     color: gray;
     font-size: 18;
+}
+
+#showHighscore {
+    border-style: none;
+    background-color: white;
+}
+
+#showHighscore a {
+    color: rgb(233, 83, 233);
+    font-size: 24px;
 }

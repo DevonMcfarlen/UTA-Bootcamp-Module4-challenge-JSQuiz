@@ -13,9 +13,8 @@
     <body>
         <nav class="navbar navbar-expand-lg navbar">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">Show Highscore</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+              <button type="button" value="click" id="showHighscore">
+                <a>Show Highscores</a>
               </button>
                 <span id="timer">
                   Time: 90
@@ -35,12 +34,17 @@
                         </p>
                     </div>
 
-                    <div class="btn-group col-2 justify-content-center" role="group" aria-label="Basic outlined example">
+                    <ul style="display: none" class="list-group">
+                    </ul>
+
+                    <div class="btn-group col-12 justify-content-center" role="group" aria-label="Basic outlined example">
                         <button type="button" value="click" id="startBtn">Start Quiz</button>
                         <button style="display: none" type="button" value="click" id="answerBtn"></button>
                         <button style="display: none" type="button" value="click" id="answerBtn"></button>
                         <button style="display: none" type="button" value="click" id="answerBtn"></button>
                         <button style="display: none" type="button" value="click" id="answerBtn"></button>
+                        <button style="display: none" type="button" value="click" id="goBackBtn">Go back</button>
+                        <button style="display: none" type="button" value="click" id="clearBtn">Clear High scores</button>
                     </div>
 
                     <form style="display: none" class="row g-3 justify-content-center">
@@ -55,7 +59,7 @@
                             <button type="button" id="submitBtn">Submit</button>
                         </div>
                     </form>
-
+                    
                     <div class="col-12 text-center">
                         <p style="display: none" id="in-correct">
                             You shouldn't see this
