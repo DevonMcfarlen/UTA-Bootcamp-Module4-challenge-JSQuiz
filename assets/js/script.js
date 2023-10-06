@@ -14,11 +14,11 @@ var currentTime = 90;
 var timer;
 
 var quiz = [
-    ["1: Question text", "Answer Choice 1", "Answer Choice 2", "Answer Choice 3", "Answer Choice 4", "Answer Choice 3"],
-    ["2: Question text", "Answer Choice 1", "Answer Choice 2", "Answer Choice 3", "Answer Choice 4", "Answer Choice 4"],
-    ["3: Question text", "Answer Choice 1", "Answer Choice 2", "Answer Choice 3", "Answer Choice 4", "Answer Choice 2"],
-    ["4: Question text", "Answer Choice 1", "Answer Choice 2", "Answer Choice 3", "Answer Choice 4", "Answer Choice 3"],
-    ["5: Question text", "Answer Choice 1", "Answer Choice 2", "Answer Choice 3", "Answer Choice 4", "Answer Choice 1"],
+    ["1: How do you assign a variable?", "Variable i", "variable i", "var i", "Var i", "var i"],
+    ["2: How do you give a variable data to store", "variable i = data", "Variable i = data", "Var i = data", "var i = data", "var i = data"],
+    ["3: How do you log things to the console", "log.console()", "console.log()", "Console.log()", "Console.Log()", "console.log()"],
+    ["4: How do you make a function", "function myFunction(){}", "Function myFunction()", "Function myFunction(){}", "function myFunction()", "function myFunction(){}"],
+    ["5: How would you call a function with the name myFunction", "Function.myFunction()", "function.myFunction()", "myFunction()", "myFunction", "myFunction()"],
 ];
 
 var highscores = [];
@@ -52,7 +52,6 @@ function endQuiz() {
     highScoreInput[0].value = null;
 
     headerText.textContent = "All done!"
-    inCorrect.textContent = "";
     for(var i = 0; i < ansBtns.length; i++){
         ansBtns[i].setAttribute('style', 'display:none');
     }
