@@ -10,7 +10,7 @@ This challenge helped me further my skills with getting and using a user's input
 
 ## Usage
 
-Link to the webpage: https://devonmcfarlen.github.io/UTA-Bootcamp-module3-challenge-PasswordGenerator/
+Link to the webpage: https://devonmcfarlen.github.io/UTA-Bootcamp-Module4-challenge-JSQuiz/
 
 ![alt text](./assets/images/websiteSS.png)
 
