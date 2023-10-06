@@ -23,9 +23,27 @@ var quiz = [
 
 var highscores = [];
 
+function endQuiz() {
+    clearInterval(timer);
+    highScoreInput[0].value = null;
+
+    headerText.textContent = "All done!"
+    for(var i = 0; i < ansBtns.length; i++){
+        ansBtns[i].setAttribute('style', 'display:none');
+    }
+
+    highScoreInput.setAttribute('style', 'display: shown');
+    headerInfo.setAttribute('style', 'display: shown');
+    headerInfo.textContent = "Your final score is " + currentTime + ".";
+}
+
 function timeKeeper() {
     currentTime--;
     timeTracker.textContent = "Time: " + currentTime;
+
+    if(currentTime <= 0){
+        endQuiz();
+    }
 }
 
 function setQuestion() {
@@ -45,20 +63,6 @@ function startQuiz() {
 
     setQuestion();
     timer = setInterval(timeKeeper, 1000);
-}
-
-function endQuiz() {
-    clearInterval(timer);
-    highScoreInput[0].value = null;
-
-    headerText.textContent = "All done!"
-    for(var i = 0; i < ansBtns.length; i++){
-        ansBtns[i].setAttribute('style', 'display:none');
-    }
-
-    highScoreInput.setAttribute('style', 'display: shown');
-    headerInfo.setAttribute('style', 'display: shown');
-    headerInfo.textContent = "Your final score is " + currentTime + ".";
 }
 
 function answerQuestion(answerPressed) {
